@@ -1,0 +1,1 @@
+cat chords.json | sed 's/]/\n/g' | python3 -c "import sys, random; random.seed(42); lines = sys.stdin.readlines(); random.shuffle(lines); print(''.join(lines[:1000]), end='')" > random1000.json
